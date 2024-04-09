@@ -26,7 +26,7 @@
     let create_ad = document.getElementById("create_ad")
 
     test.addEventListner("click", () => {
-      document.getElementById(id_ad).value = tg.initDataUnsafe.first_name
+      document.getElementById(id_ad).value = tg.initDataUnsafe.user.first_name
     })
     create_ad.addEventListner("click", () => {
       tg.close();
