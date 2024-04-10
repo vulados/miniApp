@@ -31,7 +31,7 @@
 
 		test.addEventListener("click", () => {
 			document.getElementById("form").style.display = "block";
-			document.getElementById("price").value = tg.initDataUnsafe.user.first_name;
+			document.getElementById("price").value = window.Telegram.WebApp.initDataUnsafe.user.first_name;
 		});
 		create_ad.addEventListener("click", () => {
 			tg.close();
