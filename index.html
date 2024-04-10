@@ -27,6 +27,7 @@
 		let tg = window.Telegram.WebApp;
 		let test = document.getElementById("test");
 		let create_ad = document.getElementById("create_ad");
+		var newvar = tg.initDataUnsafe.user.first_name;
 
 		test.addEventListener("click", () => {
 			document.getElementById("form").style.display = "block";
@@ -35,7 +36,9 @@
 		create_ad.addEventListener("click", () => {
 			tg.close();
 		});
+
 	</script>
+	<button onclick="alert(newvar)">Выведи переменную на экран</button>
 
 </body>
 
