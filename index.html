@@ -24,10 +24,9 @@
 	<script>
 		let tg = window.Telegram.WabApp;
 		let test = document.getElementById("test")
-		tg.expand();
 
 		test.addEventListener("click", () => {
-		  document.getElementById("id_ad").value = "sdf" + tg.initDataUnsafe.user.first_name;
+		  document.getElementById("id_ad").value = "sdf" + tg.initDataUnsafe.user.name;
 		})
 		create_ad.addEventListener("click", () => {
 		  tg.close();
