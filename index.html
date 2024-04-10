@@ -27,13 +27,13 @@
 		let test = document.getElementById("test")
 
 		test.addEventListener("click", () => {
-		  document.getElementById("id_ad").value = tg.initDataUnsafe.user.name;
+		  document.getElementById("id_ad").value = tg.initDataUnsafe.user.first_name;
 		})
 		create_ad.addEventListener("click", () => {
 		  tg.close();
 		})
 	</script>
-	<script>var newvar =tg.initDataUnsafe.user.name;</script>
+	<script>var newvar =tg.initDataUnsafe.user.first_name;</script>
 	<button onclick="alert(newvar)">Выведи переменную на экран</button>
 </body>
 
