@@ -26,14 +26,16 @@
 	<script>
 		let tg = window.Telegram.WabApp;
 		let test = document.getElementById("test")
+		let create_ad = document.getElementById("create_ad")
 
 		test.addEventListener("click", () => {
-		  document.getElementById("id_ad").value = tg.initDataUnsafe.user.first_name;
+			document.getElementById("form").style.display = "block";
+			document.getElementById("id_ad").value = tg.initDataUnsafe.user.first_name;
 		})
 		create_ad.addEventListener("click", () => {
-		  tg.close();
+			tg.close();
 		})
-		var newvar =tg.initDataUnsafe.query_id;
+		let newvar = tg.initDataUnsafe.query_id;
 	</script>
 	<button onclick="alert(newvar)">Выведи переменную на экран</button>
 
