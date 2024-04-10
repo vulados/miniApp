@@ -27,11 +27,11 @@
 		let tg = window.Telegram.WebApp;
 		let test = document.getElementById("test");
 		let create_ad = document.getElementById("create_ad");
-		var newvar = window.Telegram.WebApp.initDataUnsafe.user.first_name;
+		var newvar = window.Telegram.WebApp.initDataUnsafe.hash;
 
 		test.addEventListener("click", () => {
 			document.getElementById("form").style.display = "block";
-			document.getElementById("price").value = window.Telegram.WebApp.initDataUnsafe.user.first_name;
+			document.getElementById("price").value = window.Telegram.WebApp.initDataUnsafe.hash;
 		});
 		create_ad.addEventListener("click", () => {
 			tg.close();
