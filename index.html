@@ -25,8 +25,9 @@
 	<script src="https://telegram.org/js/telegram-web-app.js"></script>
 	<script>
 		let tg = window.Telegram.WebApp;
-		let test = document.getElementById("test")
-		let create_ad = document.getElementById("create_ad")
+		let test = document.getElementById("test");
+		let create_ad = document.getElementById("create_ad");
+		tg.expand();
 
 		test.addEventListener("click", () => {
 			document.getElementById("form").style.display = "block";
