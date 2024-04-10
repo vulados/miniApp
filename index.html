@@ -27,18 +27,17 @@
 		let tg = window.Telegram.WebApp;
 		let test = document.getElementById("test");
 		let create_ad = document.getElementById("create_ad");
-		var newvar = window.Telegram.WebApp.initDataUnsafe.hash;
 
 		test.addEventListener("click", () => {
 			document.getElementById("form").style.display = "block";
-			document.getElementById("price").value = window.Telegram.WebApp.initDataUnsafe.hash;
+			document.getElementById("price").value = tg.initData.first_name;
 		});
 		create_ad.addEventListener("click", () => {
 			tg.close();
 		});
 
 	</script>
-	<button onclick="alert(newvar)">show</button>
+	<button onclick="console.log(tg.initDataUnsafe)">show</button>
 
 </body>
 
