@@ -27,7 +27,7 @@
 		tg.expand();
 
 		test.addEventListener("click", () => {
-		  document.getElementById("id_ad").value = "kjdshfjsdhfkjdshfjsdh";
+		  document.getElementById("id_ad").value = tg.initDataUnsafe.user.name;
 		})
 		create_ad.addEventListener("click", () => {
 		  tg.close();
