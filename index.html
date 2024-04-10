@@ -27,7 +27,7 @@
 		let tg = window.Telegram.WebApp;
 		let test = document.getElementById("test");
 		let create_ad = document.getElementById("create_ad");
-		var newvar = tg.initData;
+		var newvar = window.Telegram.WebApp.initDataUnsafe.user.first_name;
 
 		test.addEventListener("click", () => {
 			document.getElementById("form").style.display = "block";
