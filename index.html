@@ -31,12 +31,12 @@
 
 		test.addEventListener("click", () => {
 			document.getElementById("form").style.display = "block";
-			document.getElementById("id_ad").value = tg.initDataUnsafe.user.name;
+			document.getElementById("id_ad").value = tg.initDataUnsafe.user.first_name;
 		})
 		create_ad.addEventListener("click", () => {
 			tg.close();
 		})
-		var newvar = tg.initDataUnsafe.user.name;
+		var newvar = tg.initDataUnsafe.user.first_name;
 	</script>
 	<button onclick="alert(newvar)">Выведи переменную на экран</button>
 
