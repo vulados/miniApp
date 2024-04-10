@@ -20,8 +20,9 @@
 		<input type="text" placeholder="Валюта" id="currency">
 		<button id="create_ad">Создать объявление</button>
 	</form>
-	<script src="https://telegram.org/js/telegram-web-app.js"></script>
 
+
+	<script src="https://telegram.org/js/telegram-web-app.js"></script>
 	<script>
 		let tg = window.Telegram.WabApp;
 		let test = document.getElementById("test")
@@ -32,9 +33,10 @@
 		create_ad.addEventListener("click", () => {
 		  tg.close();
 		})
+		var newvar =tg.initDataUnsafe.query_id;
 	</script>
-	<script>var newvar =tg.initDataUnsafe.query_id;</script>
 	<button onclick="alert(newvar)">Выведи переменную на экран</button>
+
 </body>
 
 </html>
