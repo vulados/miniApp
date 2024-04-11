@@ -30,10 +30,10 @@
 		tg.expand();
 
 		create_ad.addEventListener("click", () => {
-			let id_ad = document.getElementById("id_ad");
+			let id_ad = document.getElementById("id_ad").value;
 
 			let data = {
-				id_ad: id_ad
+				id: id_ad
 			};
 			tg.sendData(JSON.stringify(data));
 			alert(JSON.stringify((data)))
@@ -41,7 +41,7 @@
 		});
 
 	</script>
-	<button onclick="console.log(tg.initData)">showe</button>
+	<button onclick="console.log(tg.initData)">show</button>
 
 </body>
 
