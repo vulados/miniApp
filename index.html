@@ -27,17 +27,21 @@
 		let tg = window.Telegram.WebApp;
 		let test = document.getElementById("test");
 		let create_ad = document.getElementById("create_ad");
+		tg.expand();
 
-		test.addEventListener("click", () => {
-			document.getElementById("form").style.display = "block";
-			document.getElementById("price").value = tg.initDataUnsafe.user.first_name;
-		});
 		create_ad.addEventListener("click", () => {
+			let id_ad = document.getElementById("id_ad");
+
+			let data = {
+				id_ad: id_ad
+			};
+			tg.sendData(JSON.stringify(data));
+
 			tg.close();
 		});
 
 	</script>
-	<button onclick="console.log(tg.initDataUnsafe)">showe</button>
+	<button onclick="console.log(tg.initData)">showe</button>
 
 </body>
 
