@@ -5,21 +5,23 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="./style.css">
 	<title>Title</title>
 </head>
 
 <body>
-	<div id="main">
-		<h1>Объявление</h1>
-		<p>AAAAAAAAAAA</p>
-	<button type="button" id="test">тест</button>
-	</div>
-	<form id="form">
-		<input type="text" placeholder="id ad" id="id_ad">
-		<input type="text" placeholder="Цена" id="price">
-		<input type="text" placeholder="Валюта" id="currency">
-		<button id="create_ad">Создать объявление</button>
-	</form>
+
+		<div class="container">
+			<h1></h1>
+			<div class="garant">
+				<form id="form" class="form">
+					<input type="text" placeholder="id ad" id="id_ad" class="form__item">
+					<input type="text" placeholder="Цена" id="price" class="form__item">
+					<input type="text" placeholder="Валюта" id="currency" class="form__item">
+					<button id="create_ad">Создать объявление</button>
+				</form>
+			</div>
+		</div>
 
 
 	<script src="https://telegram.org/js/telegram-web-app.js"></script>
@@ -40,8 +42,6 @@
 		});
 
 	</script>
-	<button onclick="alert(JSON.stringify((data)));">showe</button>
-
 </body>
 
 </html>
