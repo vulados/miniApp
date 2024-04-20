@@ -35,10 +35,10 @@
 			let id_ad = document.getElementById("id_ad").value;
 
 			let data = {
-				id: id_ad
+				query_id: tg.initDataUnsafe.query_id
 			};
 
-			alert(tg.initDataUnsafe.user.first_name);
+			alert(JSON.stringify((data)));
 		});
 
 	</script>
