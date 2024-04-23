@@ -15,10 +15,14 @@
 			<h1></h1>
 			<div class="garant">
 				<form id="form" class="form">
-					<input type="text" placeholder="id ad" id="id_ad" class="form__item">
-					<input type="text" placeholder="Цена" id="price" class="form__item">
-					<input type="text" placeholder="Валюта" id="currency" class="form__item">
+					<input type="number" min="1000" max="1000000000" placeholder="Цена" id="price" class="form__item">
+					<select name="currency" id="currency">
+						<option value="usdt">USDT</option>
+						<option value="rub">RUB</option>
+					</select>
 					<button type="button" id="create_ad">Создать объявление</button>
+
+					<div id="error"></div>
 				</form>
 			</div>
 		</div>
@@ -27,18 +31,21 @@
 	<script src="https://telegram.org/js/telegram-web-app.js"></script>
 	<script>
 		let tg = window.Telegram.WebApp;
-		let test = document.getElementById("test");
 		let create_ad = document.getElementById("create_ad");
 		tg.expand();
 
 		create_ad.addEventListener("click", () => {
-			let id_ad = document.getElementById("id_ad").value;
+			let price = document.getElementById("price").value;
+			let currency = document.getElementById("currency").value;
 
 			let data = {
-				query_id: tg.initDataUnsafe.query_id
+				price: price,
+				currency: currency
 			};
 
 			console.log(tg.initDataUnsafe);
+			tg.sendData(JSON.stringify(data));
+			tg.close();
 		});
 
 	</script>
