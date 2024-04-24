@@ -15,7 +15,7 @@
 			<h1></h1>
 			<div class="garant">
 				<form id="form" class="form">
-					<input type="number" min="1000" max="1000000000" placeholder="Цена" id="price" class="form__item">
+					<input type="number" placeholder="Цена" id="price" class="form__item">
 					<select name="currency" id="currency">
 						<option value="usdt">USDT</option>
 						<option value="rub">RUB</option>
@@ -35,15 +35,23 @@
 		tg.expand();
 
 		create_ad.addEventListener("click", () => {
+			let error = document.getElementById("error");
+			error.innerText = '';
+
 			let price = document.getElementById("price").value;
 			let currency = document.getElementById("currency").value;
 
+
+			if(price==='' || price[0]==='-'){
+				error.innerText = 'пиши нормально быдло';
+				return;
+			}
 			let data = {
 				price: price,
 				currency: currency
 			};
-
-			console.log(tg.initDataUnsafe);
+			console.log(price[0])
+			console.log(data)
 			tg.sendData(JSON.stringify(data));
 			tg.close();
 		});
