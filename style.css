@@ -4,8 +4,21 @@
   box-sizing: border-box;
 }
 
+.body{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    color: var(--tg-theme-text-color);
+    background: var(--tg-theme-bg-color);
+}
+
+#main{
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
 .container{
-    max-width: 800px;
+    max-width: 400px;
     margin: 0 auto;
     font-size: 200px;
 }
@@ -17,4 +30,20 @@
 
 .form__item{
     margin-bottom: 20px;
+}
+
+.button{
+    border: 0;
+    border-radius: 5px;
+    margin-top: 50px;
+    height: 60px;
+    width: 200px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 500ms ease;
+    color: var(--tg-theme-button-color);
+    background: var(--tg-theme-button-text-color);
+}
+button:hover{
+    background: var(--tg-theme-secondary-bg-color);
 }
